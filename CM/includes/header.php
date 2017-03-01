@@ -7,7 +7,7 @@
   <?php
     include 'head/head.php';
   ?>
-<body>
+<body onLoad="setToday()">
   <?php
     $CurrentPage = basename($_SERVER['PHP_SELF']);
     if ($CurrentPage == 'signin.php') {

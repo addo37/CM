@@ -9,4 +9,6 @@
     <link rel="stylesheet" href="assets/css/add-transaction-div.css">
     <link rel="stylesheet" href="assets/css/add-user-div.css">
     <link rel="stylesheet" href="assets/css/sign-in-div.css">
+    <! Calendar >
+    <script src="assets/js/calendar.js"></script>
 </head>

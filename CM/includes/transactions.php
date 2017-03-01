@@ -28,24 +28,47 @@
       <div class = "form-container">
         <div class = "calendar-holder">
           <! Calender to be added >
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-          <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
-          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-          <link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
-          <! Calender start >
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-          </div>
-          <script>
-          $('#datetimepicker').datetimepicker();
-          </script>
+          <form name="calControl" onSubmit="return false;" method="post">
+          <table cellpadding="0" cellspacing="0" border="0">
+          	<tr>
+          		<td colspan=7>
+          			<select class="month_style" name="month" onChange="selectdate()">
+          				<option>January</option>
+          				<option>February</option>
+          				<option>March</option>
+          				<option>April</option>
+          				<option>May</option>
+          				<option>June</option>
+          				<option>July</option>
+
+          				<option>August</option>
+          				<option>September</option>
+          				<option>October</option>
+          				<option>November</option>
+          				<option>December</option>
+          			</select>
+          			<input type=text class="year_style" name="year"  size=4 maxlength=4>
+          			<input type="button" class="build_style" name="Go" value="Go to!" onClick="selectDate()">
+          		</td>
+          	</tr>
+          </form>
+          <form name="calButtons" method="post">
+          	<tr>
+          		<td>
+                <textarea font="Courier" class="area_style" name="calPage" WRAP=no rows=8 cols=22 disabled></textarea>
+              </td>
+        			<tr>
+        				<td>
+        					<input type=button class="btn_nav" name="previousYear" value=" <<  "  onClick="setPreviousYear()">
+        					<input type=button class="btn_nav" name="previousYear" value="  <  "  onClick="setPreviousMonth()">
+        					<input type=button class="btn_nav" name="previousYear" value="Today"  onClick="setToday()">
+        					<input type=button class="btn_nav" name="previousYear" value="  >  "  onClick="setNextMonth()">
+        					<input type=button class="btn_nav" name="previousYear" value="  >> "  onClick="setNextYear()">
+        				</td>
+        			</tr>
+          	</tr>
+          </table>
+          </form>
           <! Calender end >
         </div>
           <form method = "post" action = "index.php">
