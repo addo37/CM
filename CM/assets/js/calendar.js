@@ -96,22 +96,22 @@ function displayCalendar(month, year) {
   var firstOfMonth = new Date (year, month, 1);
   var startingPos = firstOfMonth.getDay();
   days += startingPos;
-  document.calButtons.calPage.value  = "Su Mo Tu We Th Fr Sa";
-  document.calButtons.calPage.value += "\n ____________________";
+  document.calButtons.calPage.value  = "";
+  //document.calButtons.calPage.value += "\n ____________________";
   for (i = 0; i < startingPos; i++) {
-    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
-    document.calButtons.calPage.value += "   ";
+    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n";
+    document.calButtons.calPage.value += "";
   }
   for (i = startingPos; i < days; i++) {
-    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
+    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n";
     if (i-startingPos+1 < 10)
     document.calButtons.calPage.value += "0";
     document.calButtons.calPage.value += i-startingPos+1;
     document.calButtons.calPage.value += " ";
   }
   for (i=days; i<42; i++)  {
-    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n ";
-    document.calButtons.calPage.value += "   ";
+    if ( i%7 == 0 ) document.calButtons.calPage.value += "\n";
+    document.calButtons.calPage.value += " ";
   }
   document.calControl.Go.focus();
 }

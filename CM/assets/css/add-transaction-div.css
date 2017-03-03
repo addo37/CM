@@ -1,14 +1,14 @@
 .add-trans {
 
 }
-
+/*
 .add-trans .calendar-holder {
   display:table-cell;
   width:auto;
   background:url(../../assets/img/meeting.jpg);
   background-size:cover;
 }
-
+*/
 .add-trans .form-container {
   display:table;
   max-width:900px;
@@ -82,4 +82,13 @@
   color:#6f7a85;
   opacity:0.9;
   text-decoration:none;
+}
+.area_style {
+  resize: none;
+  width: 100%;
+  color: black;
+  background: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
 }
