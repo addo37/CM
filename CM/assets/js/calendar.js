@@ -137,3 +137,10 @@ function isLeapYear (Year) {
     return (false);
   }
 }
+
+function printDate (ele) {
+    var id = ele.id;
+
+    console.log('area element id = ' + id);
+}
+

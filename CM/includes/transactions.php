@@ -27,45 +27,10 @@
   <div class = "add-trans">
       <! Calender to be added >
       <div class = "form-container">
-        <form name="calControl" onSubmit="return false;" method="post">
-          <div class = "form-group">
-            <select class = "form-control" name="month" onChange="selectdate()">
-              <option>January</option>
-              <option>February</option>
-              <option>March</option>
-              <option>April</option>
-              <option>May</option>
-              <option>June</option>
-              <option>July</option>
-              <option>August</option>
-              <option>September</option>
-              <option>October</option>
-              <option>November</option>
-              <option>December</option>
-            </select>
-          </div>
-          <div class = "form-group">
-            <input type = "text" class = "form-control" name = "year"  size = "4" maxlength = "4">
-          </div>
-          <div class = "form-group">
-            <input type = "button" class = "btn btn-primary btn-block" name = "Go" value = "Select Date" onClick="selectDate()">
-          </div>
-        </form>
-      </div>
-      <div class = "form-container">
-        <form name = "calButtons" method="post">
-          <div class = "form-group">
-            <label>Days: </label>
-            <textarea font = "Courier" class = "area_style" name = "calPage" WRAP = "no" rows = "7" disabled></textarea>
-          </div>
-          <div class = "form-group">
-  					<input type = "button" class = "btn_nav" name = "previousYear" value = " <<  "  onClick = "setPreviousYear()">
-  					<input type = "button" class = "btn_nav" name = "previousYear" value = "  <  "  onClick = "setPreviousMonth()">
-  					<input type = "button" class = "btn_nav" name = "previousYear" value = "Today"  onClick = "setToday()">
-  					<input type = "button" class = "btn_nav" name = "previousYear" value = "  >  "  onClick = "setNextMonth()">
-  					<input type = "button" class = "btn_nav" name = "previousYear" value = "  >> "  onClick = "setNextYear()">
-          </div>
-        </form>
+		<?php
+			$calendar = new Calendar(); 
+			echo $calendar->show();
+		?>
       </div>
       <! Calender end >
     <div class = "form-container">
